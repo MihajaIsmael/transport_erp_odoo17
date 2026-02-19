@@ -263,6 +263,61 @@ Modèle dimensionnel en **étoile** :
 
 ---
 
+## 🔧 1️⃣0️⃣ Installation de l’application
+
+### Prérequis
+
+Avant de commencer, assurez-vous d’avoir installé :
+- Docker
+- Docker Compose
+- Git
+
+> L’utilisation de Docker permet d’éviter toute installation manuelle d’Odoo ou de PostgreSQL.
+
+---
+
+### Étape 1 : Clonage du projet
+
+```bash
+git clone https://github.com/MihajaIsmael/transport_erp_odoo17.git
+cd transport_erp_odoo17
+```
+
+---
+
+### Étape 2 : Lancement de l’environnement Odoo
+
+```bash
+docker compose up -d
+```
+
+Cette commande lance :
+- le serveur **Odoo 17**
+- la base de données **PostgreSQL**
+- le module personnalisé `gestion_transport`
+
+---
+
+### Étape 3 : Accès à l’interface Odoo
+
+- URL : http://localhost:8069
+- Créer une nouvelle base de données
+- Se connecter avec le compte administrateur
+
+---
+
+### Étape 4 : Installation du module Transport
+
+1. Activer le **mode développeur** dans Odoo
+2. Aller dans **Apps**
+3. Cliquer sur **Mettre à jour la liste des applications**
+4. Rechercher le module **Gestion Transport**
+5. Installer le module
+
+Une fois installé, les menus et fonctionnalités du module apparaissent dans l’interface Odoo.
+
+---
+
 ## 📌 Contexte académique
 
 Projet réalisé dans un cadre **universitaire**, servant de support à l’analyse, la conception et la démonstration d’un **ERP décisionnel orienté données**.
