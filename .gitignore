@@ -1,0 +1,9 @@
+__pycache__
+.env
+.venv
+.idea
+.vscode
+*.log
+*.swp
+*.swo
+*.pyc
