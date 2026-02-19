@@ -1,118 +1,274 @@
-# 🚚 Transport ERP – Odoo 17
+# 🚚 ERP Transport Terrestre – Odoo 17
 
-Projet **ERP de gestion du transport terrestre** basé sur **Odoo 17**, conçu dans un cadre **académique**. Ce projet vise à démontrer la mise en place d’un module métier personnalisé dans Odoo, intégrant des notions d’architecture modulaire, de SOA, de BI et ouvrant la voie à des usages Data Mining et IA.
+## ERP Transport Terrestre + SOA + BI + Data Mining + IA
 
----
-
-## 🎯 Objectifs du projet
-
-- Mettre en œuvre un **ERP Transport** sur Odoo 17
-- Concevoir un **module personnalisé** (`gestion_transport`)
-- Utiliser **Docker** pour simplifier l’installation et l’exécution
-- Appliquer les bonnes pratiques de développement Odoo
-- Servir de **support pédagogique / démonstration académique**
+Projet **académique** visant la conception et la mise en œuvre d’un **système ERP orienté services** pour la gestion du transport terrestre. Le projet s’appuie sur **Odoo 17** comme cœur transactionnel et intègre des dimensions **Business Intelligence, Data Mining et Intelligence Artificielle** pour l’aide à la décision.
 
 ---
 
-## 🧱 Architecture du projet
+## 👥 Équipe du projet (Groupe 3)
 
-```
-transport_erp_odoo17/
-├── addons/
-│   └── gestion_transport/
-│       ├── __init__.py
-│       ├── __manifest__.py
-│       ├── models/
-│       ├── views/
-│       ├── security/
-│       └── data/
-├── docker-compose.yml
-├── .gitignore
-└── README.md
-```
-
-### 📦 Module `gestion_transport`
-
-Le module `gestion_transport` contient la logique métier liée au transport terrestre, notamment :
-- gestion des entités métier (transport, véhicules, chauffeurs, etc.)
-- vues et menus Odoo (XML)
-- règles de sécurité (droits d’accès)
+* **ANDRIANARIVONY Heritsihoarana Kevin**
+* **RAKOTOZANANY Andry Nantenaina**
+* **RANARIMANANA Liana Miotisoa**
+* **RAVALOMANDA Andrianarimihaja Ismael**
 
 ---
 
-## ⚙️ Prérequis
+## 1️⃣ Introduction et contexte
 
-- Docker
-- Docker Compose
-- Git
+### 1.1 Présentation du domaine
 
-> Aucune installation locale d’Odoo ou de PostgreSQL n’est requise grâce à Docker.
+Le **transport terrestre** joue un rôle central dans :
 
----
+* la mobilité des passagers
+* la logistique des marchandises
+* le développement économique
 
-## 🚀 Installation et démarrage
+Cependant, de nombreuses entreprises du secteur font face à :
 
-### 1️⃣ Cloner le dépôt
+* une mauvaise gestion des réservations
+* un suivi insuffisant des véhicules
+* une absence d’analyse décisionnelle
+* un manque d’automatisation des processus
 
-```bash
-git clone https://github.com/MihajaIsmael/transport_erp_odoo17.git
-cd transport_erp_odoo17
-```
+### 1.2 Problématique
 
-### 2️⃣ Lancer l’environnement Docker
+**Comment concevoir un système intégré permettant :**
 
-```bash
-docker compose up -d
-```
+* la gestion opérationnelle du transport
+* l’analyse décisionnelle basée sur les données
+* l’automatisation du reporting
+* l’amélioration continue des performances
 
-### 3️⃣ Accéder à Odoo
+### 1.3 Objectifs du projet
 
-- URL : http://localhost:8069
-- Créer une base de données
-- Activer le **mode développeur**
-- Installer le module **Gestion Transport**
+#### 🎯 Objectif général
 
----
+Concevoir un **ERP de transport terrestre orienté services**, intégrant des capacités de **BI, Data Mining et IA**.
 
-## 🧪 Environnement de développement
+#### 🎯 Objectifs spécifiques
 
-- **Odoo** : 17.x
-- **Langage** : Python
-- **Base de données** : PostgreSQL
-- **Orchestration** : Docker / Docker Compose
-
----
-
-## 📊 Axes d’évolution prévus
-
-- Planning et affectation des véhicules
-- Gestion des chauffeurs et itinéraires
-- Génération de rapports (PDF, statistiques)
-- Intégration BI / tableaux de bord
-- Exposition de services (SOA / API)
-- Exploitation des données (Data Mining, IA)
+* Mettre en place un ERP transactionnel
+* Assurer la qualité et la fiabilité des données
+* Concevoir un Data Warehouse
+* Développer des tableaux de bord décisionnels
+* Intégrer une assistance basée sur l’IA
 
 ---
 
-## 📚 Contexte académique
+## 2️⃣ Analyse des besoins
 
-Ce projet est réalisé dans un **cadre académique** et a pour but de :
-- illustrer le développement de modules Odoo
-- démontrer une architecture ERP orientée métier
-- servir de base à une soutenance ou démonstration technique
+### 2.1 Identification des acteurs
+
+* Administrateur
+* Agent de réservation
+* Responsable transport
+* Chauffeur
+* Client
+* Direction
+
+### 2.2 Processus métier principaux
+
+#### 🚗 Gestion de la flotte
+
+* Enregistrement des véhicules
+* Suivi de la maintenance
+* Affectation des véhicules
+
+#### 🛣️ Gestion des trajets
+
+* Création des lignes
+* Planification des horaires
+* Affectation des chauffeurs
+
+#### 👥 Gestion des clients
+
+* Réservation de billets
+* Gestion du transport de marchandises
+
+#### 💰 Gestion financière
+
+* Paiements
+* Facturation
+* Suivi des revenus
+
+### 2.3 Besoins fonctionnels
+
+Le système doit permettre :
+
+* ✔ gestion des utilisateurs et des rôles
+* ✔ gestion des véhicules
+* ✔ gestion des chauffeurs
+* ✔ gestion des trajets
+* ✔ gestion des réservations
+* ✔ gestion de la maintenance
+* ✔ facturation
+* ✔ génération de rapports
+
+### 2.4 Besoins non fonctionnels
+
+* Sécurité
+* Performance
+* Fiabilité
+* Scalabilité
+* Traçabilité
 
 ---
 
-## 👤 Auteurs
+## 3️⃣ Architecture globale du système
 
-**Kevin Heritsihoarana ANDRIANARIVONY**
-**Andry Nantenaina RAKOTOZANANY**
-**Liana Miotisoa RANARIMANANA**
-**Ismael A. RAVALOMANDA** 
-Projet académique – Odoo 17
+### 3.1 Architecture multi‑couches
+
+* **Couche présentation** : Interface utilisateur Odoo
+* **Couche métier** : Services ERP
+* **Couche données** : Base transactionnelle + Data Warehouse
+
+### 3.2 Architecture SOA
+
+Services exposés via **API REST** :
+
+* Service réservation
+* Service flotte
+* Service maintenance
+* Service facturation
+* Service reporting
+
+---
+
+## 4️⃣ Conception ERP et règles de gestion
+
+### 4.1 Modules ERP
+
+#### Module Gestion des véhicules
+
+**Fonctions** :
+
+* Ajouter un véhicule
+* Consulter l’historique de maintenance
+* Suivre l’utilisation
+
+**Règles de gestion** :
+
+* Un véhicule doit être validé avant affectation
+* Maintenance obligatoire selon le kilométrage
+
+#### Module Gestion des chauffeurs
+
+**Fonctions** :
+
+* Gestion des informations
+* Planning de travail
+* Affectation aux véhicules
+
+**Règles** :
+
+* Permis valide obligatoire
+* Un chauffeur ne peut conduire qu’un seul véhicule à la fois
+
+#### Module Gestion des trajets
+
+* Création des lignes
+* Planification des horaires
+* Affectation des ressources
+
+#### Module Réservation
+
+* Réservation de sièges
+* Gestion du transport de marchandises
+* Annulation des réservations
+
+#### Module Facturation
+
+* Génération des factures
+* Paiement
+* Historisation des transactions
+
+### 4.2 Journalisation et traçabilité
+
+* Historique des modifications
+* Logs des actions utilisateurs
+* Audit système
+
+---
+
+## 5️⃣ Gouvernance et qualité des données
+
+* Normalisation des données
+* Validation des champs obligatoires
+* Détection des incohérences et doublons
+* Séparation des données transactionnelles et analytiques
+
+---
+
+## 6️⃣ Business Intelligence
+
+### 6.1 Data Warehouse
+
+Modèle dimensionnel en **étoile** :
+
+**Table de faits** :
+
+* Faits_Transport
+
+**Dimensions** :
+
+* Temps
+* Véhicule
+* Chauffeur
+* Trajet
+* Client
+
+### 6.2 Processus ETL
+
+* Extraction depuis l’ERP
+* Transformation et nettoyage des données
+* Chargement du Data Warehouse
+
+### 6.3 Tableaux de bord
+
+* **Stratégique** : rentabilité globale, évolution du chiffre d’affaires
+* **Tactique** : performance des lignes, coûts de maintenance
+* **Opérationnel** : taux de remplissage, suivi quotidien des trajets
+
+---
+
+## 7️⃣ Data Mining
+
+* Analyse exploratoire des données
+* Analyse de la saisonnalité
+* Segmentation et clustering des clients
+* Détection d’anomalies
+* Analyse des coûts de maintenance
+* Étude des corrélations (saison / demande)
+
+---
+
+## 8️⃣ Reporting assisté par IA
+
+* Génération automatique d’insights
+* Narration décisionnelle automatique
+* Recommandations : nouveaux trajets, maintenance préventive
+
+---
+
+## 9️⃣ Technologies utilisées
+
+* **ERP** : Odoo 17
+* **Base de données** : PostgreSQL
+* **BI** : Power BI / Metabase
+* **Data Mining & IA** : Python, Pandas, Scikit‑learn
+* **SOA** : API REST
+* **Conteneurisation** : Docker / Docker Compose
+
+---
+
+## 📌 Contexte académique
+
+Projet réalisé dans un cadre **universitaire**, servant de support à l’analyse, la conception et la démonstration d’un **ERP décisionnel orienté données**.
 
 ---
 
 ## 📄 Licence
 
-Projet à usage pédagogique et académique.
+Projet à usage pédagogique et académique uniquement.
