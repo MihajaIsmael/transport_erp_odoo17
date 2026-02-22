@@ -282,6 +282,30 @@ Avant de commencer, assurez-vous d’avoir installé :
 git clone https://github.com/MihajaIsmael/transport_erp_odoo17.git
 cd transport_erp_odoo17
 ```
+#### 📄 Configuration des variables d’environnement
+
+Ce projet utilise un fichier `.env` afin de centraliser les **identifiants**, **mots de passe** et **paramètres de configuration** nécessaires au déploiement avec Docker.
+
+#### 📁 Fichiers concernés
+
+- `.env.example` → fichier modèle **versionné**
+- `.env` → fichier réel **non versionné**
+
+---
+
+#### 🛠️ Étapes de configuration
+
+##### 1️⃣ Copier le fichier `.env.example`
+
+À la racine du projet :
+
+```bash
+cp .env.example .env
+```
+
+##### 2️⃣ Modifier le fichier `.env`
+
+Modifiez le fichier `.env` pour y ajouter les identifiants, mots de passe et paramètres de configuration nécessaires.
 
 ---
 
