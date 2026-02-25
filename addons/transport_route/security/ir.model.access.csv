@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_transport_route_user,transport.route user,model_transport_route,transport_route.group_transport_route_user,1,0,0,0
+access_transport_route_manager,transport.route manager,model_transport_route,transport_route.group_transport_route_manager,1,1,1,1
+
+access_transport_route_stop_user,transport.route.stop user,model_transport_route_stop,transport_route.group_transport_route_user,1,0,0,0
+access_transport_route_stop_manager,transport.route.stop manager,model_transport_route_stop,transport_route.group_transport_route_manager,1,1,1,1
+
+access_transport_trip_user,transport.trip user,model_transport_trip,transport_route.group_transport_route_user,1,0,0,0
+access_transport_trip_manager,transport.trip manager,model_transport_trip,transport_route.group_transport_route_manager,1,1,1,1
